@@ -11,11 +11,11 @@ const app = new App({
   socketMode: true,
 });
 
-app.message(async (event) => {
-    if (event.payload.subtype) return;
-    if (event.payload.user !== 'U0BP2G0BZFH') return;
+// app.message(async (event) => {
+//     if (event.payload.subtype) return;
+//     if (event.payload.user == 'U0BPMSLGMBN') return;
 
-    await event.say("mrauwwwww");
-})
+//     await event.say("mrauwwwww");
+// })
 
 await app.start();

@@ -11,5 +11,8 @@
   },
   "dependencies": {
     "@slack/bolt": "^5.0.0"
+  },
+  "patchedDependencies": {
+    "@slack/socket-mode@3.0.0": "patches/@slack%2Fsocket-mode@3.0.0.patch"
   }
 }
