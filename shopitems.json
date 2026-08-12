@@ -70,6 +70,96 @@
     "A transparent box with colorful paint markers inside",
     [],
     10
-  ]
+  ],
+
+  [
+    "Huion artist drawing glove",
+    "You should start washing your art gloves..",
+    "https://wrangler.hackclub.com/img/shop/glove.png",
+    "Hand with a black drawing glove",
+    [],
+    2
+  ],
+  [
+    "Apple Pencil tips (x4)",
+    "For those who draw too hard on their iPads!",
+    "https://wrangler.hackclub.com/img/shop/tips.png",
+    "Four Apple pencil tips",
+    [],
+    4
+  ],
+  [
+    "Aseprite License",
+    "Pixel art software!",
+    "https://wrangler.hackclub.com/img/shop/aseprite.png",
+    "Aseprite logo",
+    [],
+    6
+  ],
+  [
+    "XPPen ACK05 Wireless Shortcut Keyboard",
+    "An artist's macropad! 10 buttons! 1 big dial!",
+    "https://wrangler.hackclub.com/img/shop/xpkeyboard.png",
+    "A black macropad with a dial and 10 buttons",
+    [],
+    8
+  ],
+  [
+    "Clip Studio Paint PRO v5 License",
+    "Digital art software!",
+    "https://wrangler.hackclub.com/img/shop/csp.png",
+    "Clip Studio Paint Pro v5 box",
+    [],
+    10
+  ],
+  [
+    "XP-Pen Deco MW Drawing Tablet",
+    "A bluetooth drawing tablet that can connect to your phone?!",
+    "https://wrangler.hackclub.com/img/shop/decomw.png",
+    "A black screenless drawing tablet with 8 gray buttons on the side",
+    [],
+    15
+  ],
+  [
+    "Huion New Kamvas 13 (Gen 3)",
+    "Giant screen display!",
+    "https://wrangler.hackclub.com/img/shop/mavas.png",
+    "A black screenless drawing tablet with 8 gray buttons on the side",
+    [],
+    15
+  ],
+
+  [
+    "Wrangler stickers (x3)",
+    "All three wranglers, all together!",
+    "https://wrangler.hackclub.com/img/shop/stickers.png",
+    "Three circular stickers of red, yellow, and blue adaptor-shaped robots",
+    [],
+    1
+  ],
+  [
+    "Vograce grant (5USD)",
+    "Stackable grant to manufactor all the custom merch you could ever want!",
+    "https://wrangler.hackclub.com/img/shop/vograce.png",
+    "Three circular stickers of red, yellow, and blue adaptor-shaped robots",
+    [],
+    1
+  ],
+  [
+    "Wrangler papercraft postcard",
+    "Comes with a downloadable PDF!",
+    "https://wrangler.hackclub.com/img/shop/postcard.png",
+    "Papercraft design of an artist palette",
+    [],
+    2
+  ],
+  [
+    "Doodle request!",
+    "Get a postcard-sized doodle drawn by me!",
+    "https://wrangler.hackclub.com/img/shop/request.png",
+    "A white rabbit with a blue bucket hat and yellow bowtie draws on a sheet of paper",
+    [],
+    2
+  ],
 ]
   
