@@ -65,14 +65,14 @@ export default class ModalPayload {
 		return blocks;
 	}
 
-	constructor(nm, ctx, im, al, inp, hrs) {
-		this.name = nm;
-		this.context = ctx;
-		this.img = im;
-		this.alt = al;
-		this.input = inp;
-		this.hours = hrs;
-		this.submit = { type: "plain_text", text: `${hrs} hour${hrs === 1 ? "" : "s"}`, emoji: true };
+	constructor(g) {
+		this.name = g[0];
+		this.context = g[1];
+		this.img = g[2];
+		this.alt = g[3];
+		this.input = g[4];
+		this.hours = g[5];
+		this.submit = { type: "plain_text", text: `${g[5]} hour${g[5] === 1 ? "" : "s"}`, emoji: true };
 	}
 
 	toJSON() {
