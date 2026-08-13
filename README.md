@@ -1,15 +1,8 @@
-# wrangler-shop
+# wrangler bots
+these are the Slack bots made for a hack club program, [Wrangler](https://wrangler.hackclub.com).
 
-To install dependencies:
+drip: the shop bot
 
-```bash
-bun install
-```
+ruby: the announcements bot
 
-To run:
-
-```bash
-bun run index.ts
-```
-
-This project was created using `bun init` in bun v1.3.14. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+yuri: the help bot

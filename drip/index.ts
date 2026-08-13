@@ -8,13 +8,6 @@ const app = new App({
   socketMode: true,
 });
 
-// app.message(async (event) => {
-//     if (event.payload.subtype) return;
-//     if (event.payload.user == 'U0BPMSLGMBN') return; // self message
-
-//     // await event.say(`you said ${event.body.event["text"]} in ${event.body.event["channel"]}`);
-// })
-
 // /wrangler-buy command
 app.command('/wrangler-buy', async ({ ack, body, client, command, logger, respond }) => {
   await ack();
@@ -59,10 +52,10 @@ app.command('/wrangler-stats', async ({ command, ack, respond }) => {
   await respond(`here's your stats`);
 });
 
-// /hb402-a command
-app.command('/hb402a', async ({ command, ack, event, respond, say }) => {
+// /hb402a command
+app.command('/hb402a', async ({ command, ack, say }) => {
   await ack();
-  // await app.client.chat.postMessage("hi");
+  if (command.user_id != 'U06FMCCDS1K') return; // only i (bunnyguy) can use this command!
   await say(command.text);
 });
 
