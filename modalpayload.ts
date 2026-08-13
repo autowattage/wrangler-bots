@@ -68,21 +68,11 @@ export default class ModalPayload {
 	constructor(g) {
 		this.name = g[0];
 		this.context = g[1];
-		this.img = g[2];
+		this.img = "https://wrangler.hackclub.com" + g[2];
 		this.alt = g[3];
 		this.input = g[4];
 		this.hours = g[5];
-		this.submit = { type: "plain_text", text: `${g[5]} hour${g[5] === 1 ? "" : "s"}`, emoji: true };
-	}
-
-	toJSON() {
-		return {
-			type: this.type,
-			submit: this.submit,
-			close: this.close,
-			title: this.title,
-			blocks: this.blocks,
-		};
+		this.submit = { type: "plain_text", text: `Buy for ${g[5]} hour${g[5] === 1 ? "" : "s"}`, emoji: true };
 	}
 }
 
