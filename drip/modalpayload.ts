@@ -74,6 +74,16 @@ export default class ModalPayload {
 		this.hours = g[5];
 		this.submit = { type: "plain_text", text: `Buy for ${g[5]} hour${g[5] === 1 ? "" : "s"}`, emoji: true };
 	}
+
+	toJSON() {
+		return {
+			type: this.type,
+			title: this.title,
+			submit: this.submit,
+			close: this.close,
+			blocks: this.blocks,
+		};
+	}
 }
 
 // payload json

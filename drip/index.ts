@@ -37,7 +37,7 @@ app.command('/wrangler-buy', async ({ ack, body, client, command, logger, respon
       // Pass a valid trigger_id within 3 seconds of receiving it
       trigger_id: body.trigger_id,
       // View payload
-      view: new ModalPayload(ShopItems[args[0]][args[1]-1])
+      view: new ModalPayload(ShopItems[args[0]][args[1]-1]).toJSON()
     });
   }
   catch (error) {
