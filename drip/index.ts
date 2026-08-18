@@ -3,8 +3,8 @@ import ModalPayload from "./modalpayload.ts";
 import ShopItems from "./shopitems.json";
 
 const app = new App({
-  token: process.env.SLACK_TOKEN,
-  appToken: process.env.SLACK_APP_TOKEN,
+  token: process.env.DRIP_SLACK_TOKEN,
+  appToken: process.env.DRIP_SLACK_APP_TOKEN,
   socketMode: true,
 });
 

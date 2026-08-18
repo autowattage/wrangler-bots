@@ -1,8 +1,8 @@
 import { App } from "@slack/bolt";
 
 const app = new App({
-  token: process.env.SLACK_TOKEN,
-  appToken: process.env.SLACK_APP_TOKEN,
+  token: process.env.YURI_SLACK_TOKEN,
+  appToken: process.env.YURI_SLACK_APP_TOKEN,
   socketMode: true,
 });
 
