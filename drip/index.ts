@@ -1,4 +1,5 @@
 import { App } from "@slack/bolt";
+import { getstats, purchaseitem } from "./airtable.ts";
 import ModalPayload from "./modalpayload.ts";
 import ShopItems from "./shopitems.json";
 
@@ -47,9 +48,11 @@ app.command('/wrangler-buy', async ({ ack, body, client, command, logger, respon
 });
 
 // /wrangler-stats command
-app.command('/wrangler-stats', async ({ command, ack, respond }) => {
+app.command('/wrangler-stats', async ({ command, ack, respond, client }) => {
   await ack();
-  await respond(`here's your stats`);
+  var profile = await client.users.info({user: command.user_id});
+  var email = await profile.user.profile.email;
+  await respond(await getstats(email));
 });
 
 // /hb402a command

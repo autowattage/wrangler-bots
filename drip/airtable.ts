@@ -1,34 +1,54 @@
 var Airtable = require('airtable');
-var base = new Airtable({
-    apiKey: process.env.AIRTABLE_API_KEY}).base('appznGjUoC1o6jLZd');
+var base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base('appznGjUoC1o6jLZd');
 
-    base('currency').select({
-    // Selecting the first 3 records in Pipeline View:
-    maxRecords: 3,
-    view: "Grid view"
-})
-// .eachPage(function page(records, fetchNextPage) {
-//     // This function (`page`) will get called for each page of records.
-
-//     records.forEach(function(record) {
-//         console.log('Retrieved', record.get('Loops - wranglerSignUpAt'));
-//     });
-
-//     // To fetch the next page of records, call `fetchNextPage`.
-//     // If there are more records, `page` will get called again.
-//     // If there are no more records, `done` will get called.
-//     fetchNextPage();
-
-// }, function done(err) {
-//     if (err) { console.error(err); return;
+// export function buy() {
+//     pass;
 // }
-// });
 
-base('YSWS Project Submission').select({
-    view: 'Pipeline View'
-}).firstPage(function(err, records) {
-    if (err) { console.error(err); return; }
-    records.forEach(function(record) {
-        console.log('Retrieved', record.get('Code URL'));
+// export function getstats(email) {
+//     var currencyrecord;
+//     base('currency').select({
+//         view: 'Grid view'
+//     }).firstPage(function(err, records) {
+//         if (err) { console.error(err); return; }
+//         records.forEach(function(record) {
+//             if (record.get('Email') == email) {
+//                 currencyrecord = record;
+//                 // console.log(currencyrecord);
+//             }
+//         });
+//     });
+//     console.log(currencyrecord);
+//     // base('currency').find('recYAq2FO30LmuDVj', function(err, record) {
+//     //     if (err) { console.error(err); return; }
+//     //     console.log('Retrieved', record.id);
+//     // });
+// }
+
+// what opencode gave me (thanks opencode)
+// plus modifiying stuff
+export async function getstats(email) {
+    return new Promise((resolve, reject) => {
+        var curr_record;
+        base('currency').select({
+            view: 'Grid view'
+        }).firstPage(function(err, records) {
+            if (err) { console.error(err); reject(err); return; }
+            records.forEach(function(record) {
+                if (record.get('Email') == email) { curr_record = record; }
+            });
+            if (curr_record) {
+                resolve(`\n
+accepted hours: ${curr_record.get("Accepted hours")}\n
+rejected hours: ${curr_record.get("Rejected hours")}\n
+pending hours: ${curr_record.get("Pending hours")}\n
+bonus hours added: ${curr_record.get("Manual hours added")}\n
+currency: ${curr_record.get("Shop hours")} (these are the hours you can buy in the shop)\n
+hours spent in the shop: ${curr_record.get("Spent hours")} (this is how much you've spent)
+                `);
+            } else {
+                resolve("invalid email address - use your slack account that's connected to your wrangler sign-up email!");
+            }
+        });
     });
-});
+}
